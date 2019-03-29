@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body,div,ul,li,a{margin: 0;padding: 0;}
+			#box{margin: auto;width: 100px;background: yellow;}
+			#box ul{display:none;list-style-type: none;margin: 10px 0 0 0;}
+			#box ul li{width: 100px;text-align: center;line-height: 2;}
+			#box ul li a{text-decoration: none;display: block;}
+			#box ul li a:hover{color: #0000FF;background: burlywood;}
+		</style>
+		
+	</head>
+	<body>
+		<center><button>百度输入法</button></center>
+		<div id="box">
+			<ul>
+				<li><a href="javascript:0">手写</a></li>
+				<li><a href="javascript:0">拼音</a></li>
+				<li id="close"><a href="javascript:0">关闭</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var oBtn=document.getElementsByTagName("button")[0];
+	var oBox=document.getElementById("box");
+	var oUl=oBox.getElementsByTagName("ul")[0];
+	var oClose=document.getElementById("close");
+	oBtn.onclick=function(){
+		oUl.style.display=oUl.style.display=="block"?"none":"block";
+	}
+	oClose.onclick=function(){
+		oUl.style.display="none";
+	}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body,div,span,button,center{margin: 0;padding: 0;}
+			html,body{height: 100%;overflow: hidden;}		
+			center{padding-top: 10px;}										
+			#inner{z-index:1;height: 100%;width:100%;background: #000;opacity: 0.3;filter:alpha(opacity=30);position: absolute;display: none;}
+			#box{z-index:2;width: 500px;height: 300px;background: yellow;position: absolute;top: 50%;left: 50%;margin: -150px 0 0 -250px;display: none;}
+		</style>
+	</head>
+	<body>
+
+		<div id="box"><span>xxxxxxxxxx</span></div>
+		<div id="inner"></div>
+		<center><button>弹出层</button></center>
+	</body>
+</html>
+<script type="text/javascript">
+	var oBox=document.getElementById("box");
+	var oInner=document.getElementById("inner");
+	var oBtn=document.getElementsByTagName("button")[0];
+	var oClose=oBox.getElementsByTagName("span")[0];
+	oBtn.onclick=function(){
+		alert(111);
+		oInner.style.display="block";
+		oBox.style.display="block";
+	}
+	oClose.onclick=function(){
+		oInner.style.display="none";
+		oBox.style.display="none";
+	}
+</script>
